@@ -1,41 +1,13 @@
 #!/usr/bin/env bash
 
-# Set up autograder files
+# Pull autograder changes, then run full_autograder
 
-cd /autograder/test
-
-git checkout main
+cd /autograder/lemonade_grading
 
 git config user.name 'Autograder'
 git config user.email '<>'
 
 git pull
 
-cp /autograder/submission/calculator.py /autograder/source/calculator.py
-
-cd /autograder/source
-
-python3 run_tests.py
-
-ID=$(jq '.users[0].id' /autograder/submission_metadata.json)
-
-TIMESTAMP=$(jq '.created_at[:-6]' /autograder/submission_metadata.json)
-
-cd /autograder/test
-
-git checkout submissions
-
-git pull
-
-rm -r /autograder/test/${ID}
-cp -R /autograder/submission/ /autograder/test/${ID}
-
-echo ${TIMESTAMP} > /autograder/test/${ID}/timestamp.txt
-
-git add /autograder/test/${ID}
-git push
-
-git switch main
-
-echo ${ID}
-echo ${TIMESTAMP}
+cd /autograder/lemonade_gradingmy_autograder
+.full_autograder.sh
