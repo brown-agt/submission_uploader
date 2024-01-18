@@ -10,4 +10,4 @@ git config user.email '<>'
 git pull
 
 cd /autograder/lemonade_grading/my_autograder
-.full_autograder.sh
+./full_autograder.sh
