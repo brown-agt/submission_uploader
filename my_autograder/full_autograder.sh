@@ -6,7 +6,6 @@ ID=$(jq '.users[0].id' /autograder/submission_metadata.json)
 
 TIMESTAMP=$(jq '.created_at[:-6]' /autograder/submission_metadata.json)
 
-
 rm -r /autograder/${ID}
 cp -R /autograder/submission/ /autograder/${ID}
 
