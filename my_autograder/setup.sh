@@ -12,7 +12,7 @@ cp deploy_key /root/.ssh/deploy_key
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # Clone autograder files
-git clone git@github.com:ryanedmonds2000/autogradertest.git /autograder/test
+git clone git@github.com:brown-agt/lemonade_grading.git /autograder/lemonade_grading
 
 
 
