@@ -1,0 +1,1 @@
+Student submissions will live in this directory.

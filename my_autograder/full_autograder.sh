@@ -6,7 +6,6 @@ ID=$(jq '.users[0].id' /autograder/submission_metadata.json)
 
 TIMESTAMP=$(jq '.created_at[:-6]' /autograder/submission_metadata.json)
 
-mkdir -p /autograder/grading/submissions
 
 rm -r /autograder/grading/submissions/${ID}
 cp -R /autograder/submission/ /autograder/grading/submissions/${ID}
