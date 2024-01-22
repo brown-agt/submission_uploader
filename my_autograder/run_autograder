@@ -2,12 +2,12 @@
 
 # Pull autograder changes, then run full_autograder
 
-cd /autograder/lemonade_grading
+cd /autograder/grading
 
 git config user.name 'Autograder'
 git config user.email '<>'
 
 git pull
 
-cd /autograder/lemonade_grading/my_autograder
+cd /autograder/grading/my_autograder
 ./full_autograder.sh
