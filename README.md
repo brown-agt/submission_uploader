@@ -16,7 +16,7 @@ When making a new assignment, you will need to do the following steps:
 
 # Managing Submissions
 
-Whenever a student submits to the assignment, a folder will be created at the top level of the repository, labelled by their Gradescope ID. Inside the folder will be the contents of their submission, and a `timestamp.txt` file recording the time of submission for debugging purposes. More recent submissions by the same student will replace old submissions. 
+Whenever a student submits to the assignment, a folder will be created in `submissions`, labelled by their Gradescope ID. Inside the folder will be the contents of their submission, and a `timestamp.txt` file recording the time of submission for debugging purposes. More recent submissions by the same student will replace old submissions. 
 
 # Notes and Known Issues
 
