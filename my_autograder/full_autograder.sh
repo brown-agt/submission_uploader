@@ -6,12 +6,14 @@ ID=$(jq '.users[0].id' /autograder/submission_metadata.json)
 
 TIMESTAMP=$(jq '.created_at[:-6]' /autograder/submission_metadata.json)
 
-rm -r /autograder/${ID}
-cp -R /autograder/submission/ /autograder/grading/${ID}
+mkdir -p /autograder/grading/submissions
 
-echo ${TIMESTAMP} > /autograder/grading/${ID}/timestamp.txt
+rm -r /autograder/grading/submissions/${ID}
+cp -R /autograder/submission/ /autograder/grading/submissions/${ID}
+
+echo ${TIMESTAMP} > /autograder/grading/submissions/${ID}/timestamp.txt
 
 cd /autograder/grading
-git add /autograder/grading/${ID}
+git add /autograder/grading/submissions/${ID}
 git commit -m ${TIMESTAMP}
 git push
