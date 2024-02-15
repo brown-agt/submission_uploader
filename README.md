@@ -9,7 +9,7 @@ When making a new assignment, you will need to do the following steps:
 1. Create a copy of this repository with a relevant title (e.g. Lemonade_24). Work in the new repository for all future steps.
 2. Generate an SSH key (See this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)).
    * When asked where to create the private key, create it as `/my_autograder/deploy_key` - if you place the key in the wrong spot and move it later, you may need to use `chmod 600` to fix read/write permissions.
-3. In `setup.sh`, edit `git clone git@github.com:brown-agt/lemonade_grading.git /autograder/lemonade_grading` to clone the new repository.
+3. In `setup.sh`, edit `git clone git@github.com:brown-agt/submission_uploader.git /autograder/grading` to clone the new repository.
 4. In `/my_autograder`, run `./make_autograder.sh` to generate `autograder.zip`, and upload this to Gradescope.
    * The autograder will pull from Github every time it is run. This means that `full_autograder.sh` and `tests/` can be freely edited. If other files are edited, you will likely need to re-zip and re-upload the autograder.
 5. Change `test_files.py` and add other tests as necessary (Even if you are not grading the assignment via autograder, it needs to generate an output for the student).
